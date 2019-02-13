@@ -53,6 +53,11 @@
     [sender setBackgroundImage:[UIImage imageNamed:@"cardBack"]
                       forState:UIControlStateNormal];
     [sender setTitle:@"" forState:UIControlStateNormal];
+    [self checkDeckEmpty:sender];
+}
+
+-(void)checkDeckEmpty:(UIButton*)sender{
+    if ( [self.deck isEmpty] ) { sender.hidden = YES; }
 }
 
 -(void)turnCardFront:(UIButton*)sender {
