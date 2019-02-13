@@ -19,6 +19,11 @@
 
 @implementation ViewController
 
+- (Deck *)deck {
+    if (!_deck) _deck =[PlayingCardDeck new];
+    return _deck;
+}
+
 - (void)setFlipCount:(int)flipCount
 {
     _flipCount = flipCount;
