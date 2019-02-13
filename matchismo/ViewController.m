@@ -22,21 +22,37 @@
 - (void)setFlipCount:(int)flipCount
 {
     _flipCount = flipCount;
-    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", flipCount];
+    [self updateFlipsLabel];
 }
 
-- (IBAction)touchCardButton:(UIButton *)sender
-{
-    if ([sender.currentTitle length]) {
-        [sender setBackgroundImage:[UIImage imageNamed:@"cardBack"]
-                          forState:UIControlStateNormal];
-        [sender setTitle:@"" forState:UIControlStateNormal];
-    } else {
-        [sender setBackgroundImage:[UIImage imageNamed:@"cardFront"]
-                          forState:UIControlStateNormal];
-        [sender setTitle:@"A♣️" forState:UIControlStateNormal];
-    }
+-(void)updateFlipsLabel {
+    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
+}
+
+-(void)updateFlipCount {
     self.flipCount++;
+}
+
+- (IBAction)touchCardButton:(UIButton *)sender {
+    [self updateFlipCount];
+    
+    if ( [sender.currentTitle length]) {
+        [self turnCardBack:sender];
+        return;
+    }
+    
+    [self turnCardFront:sender];
+}
+
+-(void)turnCardBack:(UIButton*)sender {
+    [sender setBackgroundImage:[UIImage imageNamed:@"cardBack"]
+                      forState:UIControlStateNormal];
+    [sender setTitle:@"" forState:UIControlStateNormal];
+}
+
+-(void)turnCardFront:(UIButton*)sender {
+    [sender setBackgroundImage:[UIImage imageNamed:@"cardFront"] forState:UIControlStateNormal];
+    [sender setTitle:[self.deck drawRandomCard].contents forState:UIControlStateNormal];
 }
 
 @end
