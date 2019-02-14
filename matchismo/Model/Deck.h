@@ -16,7 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)addCard:(Card *)card;
 
 -(Card *)drawRandomCard;
--(BOOL)isEmpty;
 @end
 
 NS_ASSUME_NONNULL_END

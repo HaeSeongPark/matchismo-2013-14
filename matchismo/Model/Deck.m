@@ -44,8 +44,4 @@
     
     return randomCard;
 }
-
-- (BOOL)isEmpty {
-    return !_cards.count;
-}
 @end
