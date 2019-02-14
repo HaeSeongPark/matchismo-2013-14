@@ -6,18 +6,18 @@
 //  Copyright © 2019 rhino Q. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CardGameViewController.h"
 #import "Model/Deck.h"
 #import "Model/PlayingCardDeck.h"
 
-@interface ViewController ()
+@interface CardGameViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int flipCount;
 @property (strong, nonatomic) Deck *deck;
 
 @end
 
-@implementation ViewController
+@implementation CardGameViewController
 
 - (Deck *)deck {
     if (!_deck) _deck = [self createDeck];
