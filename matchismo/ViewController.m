@@ -20,8 +20,12 @@
 @implementation ViewController
 
 - (Deck *)deck {
-    if (!_deck) _deck =[PlayingCardDeck new];
+    if (!_deck) _deck = [self createDeck];
     return _deck;
+}
+
+-(Deck *) createDeck {
+    return [PlayingCardDeck new];
 }
 
 - (void)setFlipCount:(int)flipCount
