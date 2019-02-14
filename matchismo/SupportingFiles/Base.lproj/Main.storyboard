@@ -106,7 +106,7 @@
                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HeK-oE-voV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flips : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wq-N8-2Ox">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wq-N8-2Ox">
                                 <rect key="frame" x="23" y="598" width="221" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -162,7 +162,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="flipsLabel" destination="7Wq-N8-2Ox" id="YwF-I1-iGo"/>
+                        <outlet property="scoreLabel" destination="7Wq-N8-2Ox" id="Kud-4u-UgD"/>
                         <outletCollection property="cardButtons" destination="vws-g5-ih6" id="iv4-ef-bgP"/>
                         <outletCollection property="cardButtons" destination="0FT-3a-Qt3" id="jwp-Ig-qN9"/>
                         <outletCollection property="cardButtons" destination="hIB-WP-CS8" id="hUO-Fr-d7r"/>
