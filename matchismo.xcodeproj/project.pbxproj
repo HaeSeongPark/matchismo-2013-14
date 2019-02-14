@@ -17,6 +17,7 @@
 		971ADB8D221121A3009BE853 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 971ADB8C221121A3009BE853 /* PlayingCard.m */; };
 		971ADB9022112395009BE853 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 971ADB8F22112395009BE853 /* Deck.m */; };
 		971ADB9322112517009BE853 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 971ADB9222112517009BE853 /* PlayingCardDeck.m */; };
+		971FE13C221576E600F4B3E1 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 971FE13B221576E600F4B3E1 /* CardMatchingGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		971ADB8F22112395009BE853 /* Deck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
 		971ADB9122112517009BE853 /* PlayingCardDeck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayingCardDeck.h; sourceTree = "<group>"; };
 		971ADB9222112517009BE853 /* PlayingCardDeck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayingCardDeck.m; sourceTree = "<group>"; };
+		971FE13A221576E600F4B3E1 /* CardMatchingGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardMatchingGame.h; sourceTree = "<group>"; };
+		971FE13B221576E600F4B3E1 /* CardMatchingGame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardMatchingGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 				971ADB8F22112395009BE853 /* Deck.m */,
 				971ADB9122112517009BE853 /* PlayingCardDeck.h */,
 				971ADB9222112517009BE853 /* PlayingCardDeck.m */,
+				971FE13A221576E600F4B3E1 /* CardMatchingGame.h */,
+				971FE13B221576E600F4B3E1 /* CardMatchingGame.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 				971ADB78221117C0009BE853 /* main.m in Sources */,
 				971ADB6A221117BF009BE853 /* AppDelegate.m in Sources */,
 				971ADB8D221121A3009BE853 /* PlayingCard.m in Sources */,
+				971FE13C221576E600F4B3E1 /* CardMatchingGame.m in Sources */,
 				971ADB9322112517009BE853 /* PlayingCardDeck.m in Sources */,
 				971ADB9022112395009BE853 /* Deck.m in Sources */,
 				971ADB8922112067009BE853 /* Card.m in Sources */,
