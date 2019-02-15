@@ -46,6 +46,12 @@
     
     self.scoreLabel.text = [NSString stringWithFormat:@"Score : %d", (int)self.game.score];
 }
+- (IBAction)touchedDealButton:(UIButton *)sender {
+    self.game = nil;
+    [self updateUI];
+}
+
+
 
 -(NSString *)titleForCard: (Card*)card {
     return card.isChosen ? card.contents : @"";
