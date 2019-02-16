@@ -9,7 +9,7 @@
 #import "CardMatchingGame.h"
 
 @interface CardMatchingGame()
-@property (nonatomic, readwrite) NSInteger score;
+@property (nonatomic, readwrite) NSInteger totalScore;
 @property (nonatomic, strong) NSMutableArray *cards; // of Card
 @end
 
@@ -64,19 +64,19 @@ static const int COST_TO_CHOOSE = 1;
             if ( [otherCards count] + 1 == self.cardsMatchMode ) {
                 int matchScore = [card match:otherCards];
                 if ( matchScore ) {
-                    self.score += matchScore * MATCH_BONUS;
+                    self.totalScore += matchScore * MATCH_BONUS;
                     card.matched = YES;
                     for (Card *otherCard in otherCards) {
                         otherCard.matched = YES;
                     }
                 } else {
-                    self.score -= MISMATCH_PENALTY;
+                    self.totalScore -= MISMATCH_PENALTY;
                     for (Card *otherCard in otherCards) {
                         otherCard.chosen = NO;
                     }
                 }
             }
-            self.score -= COST_TO_CHOOSE;
+            self.totalScore -= COST_TO_CHOOSE;
             card.chosen = YES;
         }
     }

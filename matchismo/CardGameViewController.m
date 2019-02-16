@@ -53,7 +53,7 @@ static const int DEFAULT_CARDMATCHMODE = 2;
         cardButton.enabled = !card.isMached;
     }
     
-    self.scoreLabel.text = [NSString stringWithFormat:@"Score : %d", (int)self.game.score];
+    self.scoreLabel.text = [NSString stringWithFormat:@"Score : %d", (int)self.game.totalScore];
 }
 - (IBAction)touchedDealButton:(UIButton *)sender {
     self.cardMatchMode.enabled = YES;
