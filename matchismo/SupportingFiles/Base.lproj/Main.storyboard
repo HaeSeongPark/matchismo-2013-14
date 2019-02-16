@@ -184,6 +184,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="cardMatchMode" destination="6rR-eT-hER" id="dWR-Co-Qmw"/>
                         <outlet property="scoreLabel" destination="7Wq-N8-2Ox" id="Kud-4u-UgD"/>
                         <outletCollection property="cardButtons" destination="vws-g5-ih6" id="iv4-ef-bgP"/>
                         <outletCollection property="cardButtons" destination="0FT-3a-Qt3" id="jwp-Ig-qN9"/>

@@ -16,6 +16,7 @@
 @property (nonatomic, strong) CardMatchingGame *game;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *cardMatchMode;
 @end
 
 @implementation CardGameViewController
@@ -35,6 +36,8 @@ static const int DEFAULT_CARDMATCHMODE = 2;
 }
 
 - (IBAction)touchCardButton:(UIButton *)sender {
+    self.cardMatchMode.enabled = NO;
+
     int cardIndex = (int)[self.cardButtons indexOfObject:sender];
     [self.game chooseCardAtIndex:cardIndex];
     [self updateUI];
@@ -52,6 +55,7 @@ static const int DEFAULT_CARDMATCHMODE = 2;
     self.scoreLabel.text = [NSString stringWithFormat:@"Score : %d", (int)self.game.score];
 }
 - (IBAction)touchedDealButton:(UIButton *)sender {
+    self.cardMatchMode.enabled = YES;
     self.game = nil;
     [self updateUI];
 }
