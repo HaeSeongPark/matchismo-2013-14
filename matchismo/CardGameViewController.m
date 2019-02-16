@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *cardMatchMode;
 @property (weak, nonatomic) IBOutlet UILabel *resultsDescription;
+@property (weak, nonatomic) IBOutlet UISlider *resultHistorySlider;
 @end
 
 @implementation CardGameViewController
@@ -34,6 +35,9 @@ static const int DEFAULT_CARDMATCHMODE = 2;
 
 -(Deck *) createDeck {
     return [PlayingCardDeck new];
+}
+- (IBAction)slidedreulstHistorySlider:(UISlider *)sender {
+    
 }
 
 - (IBAction)touchCardButton:(UIButton *)sender {
