@@ -12,7 +12,7 @@
 @property (nonatomic, readwrite) NSInteger totalScore;
 @property (nonatomic, strong) NSMutableArray *cards; // of Card
 @property (nonatomic, readwrite) int eachScore;
-@property (nonatomic, strong) NSArray* chosenCards;
+@property (nonatomic, strong) NSMutableArray* chosenCards;
 @end
 
 @implementation CardMatchingGame
@@ -63,22 +63,25 @@ static const int COST_TO_CHOOSE = 1;
                 }
             }
             
+            [self.chosenCards addObjectsFromArray:otherCards];
+            [self.chosenCards addObject:card];
+            
             if ( [otherCards count] + 1 == self.cardsMatchMode ) {
                 int matchScore = [card match:otherCards];
                 if ( matchScore ) {
-                    self.totalScore += matchScore * MATCH_BONUS;
+                    self.eachScore += matchScore * MATCH_BONUS;
                     card.matched = YES;
                     for (Card *otherCard in otherCards) {
                         otherCard.matched = YES;
                     }
                 } else {
-                    self.totalScore -= MISMATCH_PENALTY;
+                    self.eachScore -= MISMATCH_PENALTY;
                     for (Card *otherCard in otherCards) {
                         otherCard.chosen = NO;
                     }
                 }
             }
-            self.totalScore -= COST_TO_CHOOSE;
+            self.totalScore += self.eachScore - COST_TO_CHOOSE;
             card.chosen = YES;
         }
     }
