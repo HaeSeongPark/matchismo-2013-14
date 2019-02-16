@@ -12,17 +12,37 @@
 
 -(int)match:(NSArray *)otherCards {
     int score = 0;
+    int numberOfOtherCards = (int)[otherCards count];
+    int numberOfSuitMatch = 0;
+    int numberOfRankMatch = 0;
     
-    if([otherCards count] == 1) {
-        id card = [otherCards firstObject];
+    for (Card *card in otherCards) {
         if ( [card isKindOfClass:[PlayingCard class]]) {
             PlayingCard *otherCard = (PlayingCard *)card;
             if ( [self.suit isEqualToString:otherCard.suit]) {
-                score = 1;
+                numberOfSuitMatch++;
+                score += 1;
             } else if ( self.rank == otherCard.rank) {
-                score = 4;
+                score += 4;
+                numberOfRankMatch++;
             }
         }
+    }
+
+    
+    // for 3 CardsMatchMode case
+    if ( numberOfOtherCards > 1) {
+        // 3 ouf of 3 cards of same Rank is supre hard, so bonus 100
+        if ( numberOfRankMatch == numberOfOtherCards ) {
+            score *= score;
+        }
+        
+        // 3 ouf of 3 cards of same Suit is hard, so bonus 10
+        if ( numberOfSuitMatch == numberOfOtherCards ) {
+            score += 10;
+        }
+        
+        score += [[otherCards firstObject] match:[otherCards subarrayWithRange:NSMakeRange(1, numberOfOtherCards - 1)]];
     }
     
     return score;
