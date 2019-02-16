@@ -54,6 +54,23 @@ static const int DEFAULT_CARDMATCHMODE = 2;
     }
     
     self.scoreLabel.text = [NSString stringWithFormat:@"Score : %d", (int)self.game.totalScore];
+    
+    
+    NSString * description = @"";
+    
+    
+    NSMutableArray *cardContents = [NSMutableArray array];
+    for(Card *card in self.game.chosenCards) {
+        [cardContents addObject:card.contents];
+    }
+    description = [cardContents componentsJoinedByString:@" "];
+    
+    if ( self.game.eachScore > 0 ) {
+        description = [NSString stringWithFormat:@"Matched %@ for %d points", description, self.game.eachScore];
+    } else if ( self.game.eachScore < 0) {
+        description = [NSString stringWithFormat:@"%@ don't match! for %d points penalty", description, self.game.eachScore];
+    }
+    [self.resultsDescription setText:description];
 }
 - (IBAction)touchedDealButton:(UIButton *)sender {
     self.cardMatchMode.enabled = YES;
