@@ -51,6 +51,12 @@
     [self updateUI];
 }
 
+static const int EXTRA_NUMBER_FOR_CARDMATCHMODE = 2;
+
+- (IBAction)changedCardsMatchMode:(UISegmentedControl *)sender {
+    NSLog(@"%d", (int)[sender selectedSegmentIndex] + EXTRA_NUMBER_FOR_CARDMATCHMODE);
+}
+
 
 
 -(NSString *)titleForCard: (Card*)card {
