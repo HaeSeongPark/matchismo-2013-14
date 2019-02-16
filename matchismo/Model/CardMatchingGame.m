@@ -66,8 +66,6 @@ static const int COST_TO_CHOOSE = 1;
             self.eachScore = 0;
             self.chosenCards = [otherCards arrayByAddingObject:card];
             
-            NSLog(@"%@",self.chosenCards);
-            
             if ( [otherCards count] + 1 == self.cardsMatchMode ) {
                 int matchScore = [card match:otherCards];
                 if ( matchScore ) {

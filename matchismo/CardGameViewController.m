@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *cardMatchMode;
 @property (weak, nonatomic) IBOutlet UILabel *resultsDescription;
 @property (weak, nonatomic) IBOutlet UISlider *resultHistorySlider;
+@property (strong, nonatomic) NSMutableArray* resultHistory;
 @end
 
 @implementation CardGameViewController
@@ -36,13 +37,25 @@ static const int DEFAULT_CARDMATCHMODE = 2;
 -(Deck *) createDeck {
     return [PlayingCardDeck new];
 }
+
+-(NSMutableArray *)resultHistory {
+    if(!_resultHistory) {
+        _resultHistory = [NSMutableArray array];
+    }
+    return _resultHistory;
+}
+
+
 - (IBAction)slidedreulstHistorySlider:(UISlider *)sender {
-    
+    int positionOfSlide =  roundf(self.resultHistorySlider.value);
+    if ( positionOfSlide > 0 ) {
+        [self updateResultDescription:[self.resultHistory objectAtIndex:positionOfSlide - 1 ]];
+    }
 }
 
 - (IBAction)touchCardButton:(UIButton *)sender {
     self.cardMatchMode.enabled = NO;
-
+    
     int cardIndex = (int)[self.cardButtons indexOfObject:sender];
     [self.game chooseCardAtIndex:cardIndex];
     [self updateUI];
@@ -74,12 +87,36 @@ static const int DEFAULT_CARDMATCHMODE = 2;
     } else if ( self.game.eachScore < 0) {
         description = [NSString stringWithFormat:@"%@ don't match! for %d points penalty", description, self.game.eachScore];
     }
-    [self.resultsDescription setText:description];
+    
+    [self storeHistory:description];
+    [self updateResultHistorySlider];
+    [self updateResultDescription:description];
 }
+
+-(void)updateResultDescription: (NSString *)description {
+    [self.resultsDescription setText:description];
+    if ( self.resultHistorySlider.value == self.resultHistorySlider.maximumValue ) {
+        [self.resultsDescription setAlpha:1.0];
+    } else {
+        [self.resultsDescription setAlpha:0.5];
+    }
+}
+
+-(void)storeHistory: (NSString *)resultDescritpion {
+    [self.resultHistory addObject: resultDescritpion];
+}
+
+-(void)updateResultHistorySlider {
+    self.resultHistorySlider.maximumValue = self.resultHistory.count;
+    [self.resultHistorySlider setValue:self.resultHistory.count];
+}
+
 - (IBAction)touchedDealButton:(UIButton *)sender {
     self.cardMatchMode.enabled = YES;
     self.game = nil;
     [self updateUI];
+    self.resultHistory = nil;
+    [self updateResultHistorySlider];
 }
 
 static const int EXTRA_NUMBER_FOR_CARDMATCHMODE = 2;
