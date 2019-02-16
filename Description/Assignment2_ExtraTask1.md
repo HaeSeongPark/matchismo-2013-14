@@ -52,6 +52,7 @@ class CardGameVC...
         [self.resultsDescription setAlpha:0.5];
     }
 }
+```
 
 7. Finally, when re-dael resultHistory should be reset to nil.
 ```objc
