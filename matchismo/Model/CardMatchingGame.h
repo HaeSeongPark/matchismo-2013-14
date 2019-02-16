@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(Card *)cardAtIndex: (NSUInteger)index;
 
 @property (nonatomic, readonly) NSInteger score;
+@property (nonatomic) int cardsMatchMode;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -54,7 +54,7 @@
 static const int EXTRA_NUMBER_FOR_CARDMATCHMODE = 2;
 
 - (IBAction)changedCardsMatchMode:(UISegmentedControl *)sender {
-    NSLog(@"%d", (int)[sender selectedSegmentIndex] + EXTRA_NUMBER_FOR_CARDMATCHMODE);
+    self.game.cardsMatchMode = (int)[sender selectedSegmentIndex] + EXTRA_NUMBER_FOR_CARDMATCHMODE;
 }
 
 
