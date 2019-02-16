@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) NSInteger totalScore;
 @property (nonatomic) int cardsMatchMode;
+@property (nonatomic, readonly) int eachScore;
+@property (nonatomic, readonly) NSArray* chosenCards;
 @end
 
 NS_ASSUME_NONNULL_END
