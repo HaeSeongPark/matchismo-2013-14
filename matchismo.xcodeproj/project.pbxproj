@@ -18,6 +18,7 @@
 		971ADB9022112395009BE853 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 971ADB8F22112395009BE853 /* Deck.m */; };
 		971ADB9322112517009BE853 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 971ADB9222112517009BE853 /* PlayingCardDeck.m */; };
 		971FE13C221576E600F4B3E1 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 971FE13B221576E600F4B3E1 /* CardMatchingGame.m */; };
+		97C59BC12218EEF400BE205A /* PlayingCardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C59BC02218EEF400BE205A /* PlayingCardGameViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		971ADB9222112517009BE853 /* PlayingCardDeck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayingCardDeck.m; sourceTree = "<group>"; };
 		971FE13A221576E600F4B3E1 /* CardMatchingGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardMatchingGame.h; sourceTree = "<group>"; };
 		971FE13B221576E600F4B3E1 /* CardMatchingGame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardMatchingGame.m; sourceTree = "<group>"; };
+		97C59BBF2218EEF400BE205A /* PlayingCardGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayingCardGameViewController.h; sourceTree = "<group>"; };
+		97C59BC02218EEF400BE205A /* PlayingCardGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayingCardGameViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,8 @@
 			children = (
 				971ADB6B221117BF009BE853 /* CardGameViewController.h */,
 				971ADB6C221117BF009BE853 /* CardGameViewController.m */,
+				97C59BBF2218EEF400BE205A /* PlayingCardGameViewController.h */,
+				97C59BC02218EEF400BE205A /* PlayingCardGameViewController.m */,
 				971ADB8A2211207E009BE853 /* Model */,
 				971ADB76221117C0009BE853 /* Info.plist */,
 				971ADB7E22111812009BE853 /* SupportingFiles */,
@@ -190,6 +195,7 @@
 				971ADB9322112517009BE853 /* PlayingCardDeck.m in Sources */,
 				971ADB9022112395009BE853 /* Deck.m in Sources */,
 				971ADB8922112067009BE853 /* Card.m in Sources */,
+				97C59BC12218EEF400BE205A /* PlayingCardGameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
