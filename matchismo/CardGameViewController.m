@@ -7,8 +7,6 @@
 //
 
 #import "CardGameViewController.h"
-#import "Model/Deck.h"
-#import "Model/PlayingCardDeck.h"
 #import "Model/CardMatchingGame.h"
 
 @interface CardGameViewController ()
@@ -34,8 +32,8 @@ static const int DEFAULT_CARDMATCHMODE = 2;
     return _game;
 }
 
--(Deck *) createDeck {
-    return [PlayingCardDeck new];
+-(Deck *) createDeck { // abstract
+    return nil;
 }
 
 -(NSMutableArray *)resultHistory {
