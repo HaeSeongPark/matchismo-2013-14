@@ -7,7 +7,7 @@
 //
 
 #import "PlayingCardGameViewController.h"
-#import "Model/PlayingCardDeck.h"
+#import "PlayingCardDeck.h"
 
 @interface PlayingCardGameViewController ()
 

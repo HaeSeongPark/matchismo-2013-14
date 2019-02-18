@@ -7,7 +7,7 @@
 // Abstract class. Must implement methods as describes below.
 
 #import <UIKit/UIKit.h>
-#import "Model/Deck.h"
+#import "Deck.h"
 @interface CardGameViewController : UIViewController
 //protected
 // for subclasses

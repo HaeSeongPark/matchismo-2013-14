@@ -76,11 +76,8 @@
 		971ADB67221117BF009BE853 /* matchismo */ = {
 			isa = PBXGroup;
 			children = (
-				971ADB6B221117BF009BE853 /* CardGameViewController.h */,
-				971ADB6C221117BF009BE853 /* CardGameViewController.m */,
-				97C59BBF2218EEF400BE205A /* PlayingCardGameViewController.h */,
-				97C59BC02218EEF400BE205A /* PlayingCardGameViewController.m */,
-				971ADB8A2211207E009BE853 /* Model */,
+				97B065C8221A9D0B009E1CA6 /* General */,
+				97B065C7221A9CE6009E1CA6 /* PlayingCard */,
 				971ADB76221117C0009BE853 /* Info.plist */,
 				971ADB7E22111812009BE853 /* SupportingFiles */,
 			);
@@ -100,21 +97,32 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		971ADB8A2211207E009BE853 /* Model */ = {
+		97B065C7221A9CE6009E1CA6 /* PlayingCard */ = {
 			isa = PBXGroup;
 			children = (
+				97C59BBF2218EEF400BE205A /* PlayingCardGameViewController.h */,
+				97C59BC02218EEF400BE205A /* PlayingCardGameViewController.m */,
 				971ADB8C221121A3009BE853 /* PlayingCard.m */,
 				971ADB8B221121A3009BE853 /* PlayingCard.h */,
+				971ADB9122112517009BE853 /* PlayingCardDeck.h */,
+				971ADB9222112517009BE853 /* PlayingCardDeck.m */,
+			);
+			path = PlayingCard;
+			sourceTree = "<group>";
+		};
+		97B065C8221A9D0B009E1CA6 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				971ADB6B221117BF009BE853 /* CardGameViewController.h */,
+				971ADB6C221117BF009BE853 /* CardGameViewController.m */,
 				971ADB8722112067009BE853 /* Card.h */,
 				971ADB8822112067009BE853 /* Card.m */,
 				971ADB8E22112395009BE853 /* Deck.h */,
 				971ADB8F22112395009BE853 /* Deck.m */,
-				971ADB9122112517009BE853 /* PlayingCardDeck.h */,
-				971ADB9222112517009BE853 /* PlayingCardDeck.m */,
 				971FE13A221576E600F4B3E1 /* CardMatchingGame.h */,
 				971FE13B221576E600F4B3E1 /* CardMatchingGame.m */,
 			);
-			path = Model;
+			path = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
