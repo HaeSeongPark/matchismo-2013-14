@@ -97,13 +97,13 @@
                     [shadings addObject:otherSetCard.shading];
                 if (![numbers containsObject:@(otherSetCard.number)])
                     [numbers addObject:@(otherSetCard.number)];
-                if (([colors count] == 1 || [colors count] == self.numberOfMatchingCards)
-                    && ([symbols count] == 1 || [symbols count] == self.numberOfMatchingCards)
-                    && ([shadings count] == 1 || [shadings count] == self.numberOfMatchingCards)
-                    && ([numbers count] == 1 || [numbers count] == self.numberOfMatchingCards)) {
-                    score = 4;
-                }
             }
+        }
+        if (([colors count] == 1 || [colors count] == self.numberOfMatchingCards)
+            && ([symbols count] == 1 || [symbols count] == self.numberOfMatchingCards)
+            && ([shadings count] == 1 || [shadings count] == self.numberOfMatchingCards)
+            && ([numbers count] == 1 || [numbers count] == self.numberOfMatchingCards)) {
+            score = 4;
         }
     }
     return score;
