@@ -28,4 +28,4 @@
 
      - V : EmptyVC in storyboard and have it class SetCardGameVC
      
-     - C : SetCardGameVC which is subclass of CardGameViewController like PlayingCardGameVC
+     - C : SetCardGameVC which is subclass of CardGameViewController like PlayingCardGameVC. It has no entry points as of now.
