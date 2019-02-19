@@ -16,7 +16,7 @@
 @synthesize shape = _shape;
 
 + (NSArray *)validShape {
-    return @[@"ovals", @"squiggles", @"diamonds"]; // maybe added rectangles later?
+    return @[@"circle", @"triangle", @"square"]; // maybe added rectangles later?
 }
 
 - (void)setShape:(NSString *)shape {
