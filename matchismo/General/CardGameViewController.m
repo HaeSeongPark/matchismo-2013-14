@@ -27,7 +27,7 @@ static const int DEFAULT_CARDMATCHMODE = 2;
 - (CardMatchingGame *)game {
     if (!_game) {
         _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count] usingDeck:[self createDeck]];
-        _game.cardsMatchMode = DEFAULT_CARDMATCHMODE;
+        _game.maxMatchingCards = DEFAULT_CARDMATCHMODE;
     }
     return _game;
 }
@@ -120,7 +120,7 @@ static const int DEFAULT_CARDMATCHMODE = 2;
 static const int EXTRA_NUMBER_FOR_CARDMATCHMODE = 2;
 
 - (IBAction)changedCardsMatchMode:(UISegmentedControl *)sender {
-    self.game.cardsMatchMode = (int)[sender selectedSegmentIndex] + EXTRA_NUMBER_FOR_CARDMATCHMODE;
+    self.game.maxMatchingCards = (int)[sender selectedSegmentIndex] + EXTRA_NUMBER_FOR_CARDMATCHMODE;
 }
 
 -(NSString *)titleForCard: (Card*)card {

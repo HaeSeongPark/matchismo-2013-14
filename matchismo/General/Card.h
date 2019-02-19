@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, getter=isChosen) BOOL chosen;
 @property (nonatomic, getter=isMached) BOOL matched;
+@property (nonatomic) NSUInteger numberOfMatchingCards;
 
 -(int) match:(NSArray*)otherCards;
 

@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(Card *)cardAtIndex: (NSUInteger)index;
 
 @property (nonatomic, readonly) NSInteger totalScore;
-@property (nonatomic) int cardsMatchMode;
+@property (nonatomic) NSUInteger maxMatchingCards;
 @property (nonatomic, readonly) int eachScore;
 @property (nonatomic, readonly) NSArray* chosenCards;
 @end

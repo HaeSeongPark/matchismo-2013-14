@@ -66,7 +66,7 @@ static const int COST_TO_CHOOSE = 1;
             self.eachScore = 0;
             self.chosenCards = [otherCards arrayByAddingObject:card];
             
-            if ( [otherCards count] + 1 == self.cardsMatchMode ) {
+            if ( [otherCards count] + 1 == self.maxMatchingCards ) {
                 int matchScore = [card match:otherCards];
                 if ( matchScore ) {
                     self.eachScore += matchScore * MATCH_BONUS;
@@ -85,6 +85,15 @@ static const int COST_TO_CHOOSE = 1;
             card.chosen = YES;
         }
     }
+}
+
+- (NSUInteger)maxMatchingCards {
+    Card *card = [self.cards firstObject];
+    if(_maxMatchingCards < card.numberOfMatchingCards) {
+        _maxMatchingCards = card.numberOfMatchingCards;
+    }
+    
+    return _maxMatchingCards;
 }
 
 @end

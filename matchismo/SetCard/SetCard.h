@@ -11,6 +11,15 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SetCard : Card
+@property (strong, nonatomic) NSString *shape;
+@property (strong, nonatomic) NSString *color;
+@property (nonatomic) NSUInteger number;
+@property (strong, nonatomic) NSString *shading;
+
++(NSArray *)validShape;
++(NSArray *)validColor;
++(NSArray *)validShading;
++(NSUInteger)maxNumber;
 
 @end
 

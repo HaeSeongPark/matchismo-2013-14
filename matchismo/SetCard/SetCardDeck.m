@@ -7,7 +7,29 @@
 //
 
 #import "SetCardDeck.h"
+#import "SetCard.h"
 
 @implementation SetCardDeck
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        for( NSString *shape in [SetCard validShading]) {
+            for(NSString *color in [SetCard validColor]) {
+                for(NSString *shading in [SetCard validShading]) {
+                    for(NSInteger number = 1; number<= [SetCard maxNumber]; number++) {
+                        SetCard *card = [SetCard new];
+                        card.shape = shape;
+                        card.color = color;
+                        card.shading = shading;
+                        card.number = number;
+                        [self addCard:card];
+                    }
+                }
+            }
+        }
+    }
+    return self;
+}
 @end
