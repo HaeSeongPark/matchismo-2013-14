@@ -24,8 +24,8 @@ Stanford CS193p Fall 2013-2014 machismo project
 |End of Lecture 6| [link](https://github.com/HaeSeongPark/matchismo-2013-14/blob/master/Description/End%20of%20Lecture%206.md)  |   [link](https://github.com/HaeSeongPark/matchismo-2013-14/tree/endOfLecture6)|
 |Assignment3, Task1| [link](https://github.com/HaeSeongPark/matchismo-2013-14/blob/master/Description/Assignment3_Task1.md)   |   [link](https://github.com/HaeSeongPark/matchismo-2013-14/tree/assignment3_task1)|
 |Assignment3, Task2| [link](https://github.com/HaeSeongPark/matchismo-2013-14/blob/master/Description/Assignment3_Task2.md)   |   [link](https://github.com/HaeSeongPark/matchismo-2013-14/tree/assignment3_task2)|
-|Assignment3, Task3| []()   |   []()|
-|Assignment3, Task4| []()   |   []()|
+|Assignment3, Task3| no need task[]()   |   []()|
+|Assignment3, Task4| [link](https://github.com/HaeSeongPark/matchismo-2013-14/blob/master/Description/Assignment3_Task4.md)   |   []()|
 |Assignment3, Task5| []()   |   []()|
 |Assignment3, Task6| []()   |   []()|
 |Assignment3, Task7| []()   |   []()|
