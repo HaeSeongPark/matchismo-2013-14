@@ -15,7 +15,7 @@
 {
     self = [super init];
     if (self) {
-        for( NSString *shape in [SetCard validShading]) {
+        for( NSString *shape in [SetCard validShape]) {
             for(NSString *color in [SetCard validColor]) {
                 for(NSString *shading in [SetCard validShading]) {
                     for(NSInteger number = 1; number<= [SetCard maxNumber]; number++) {

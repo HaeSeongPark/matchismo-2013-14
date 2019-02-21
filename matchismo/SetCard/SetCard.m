@@ -16,7 +16,7 @@
 @synthesize shape = _shape;
 
 + (NSArray *)validShape {
-    return @[@"circle", @"triangle", @"square"]; // maybe added rectangles later?
+    return @[@"circle", @"triangle", @"square"]; // maybe added diamond
 }
 
 - (void)setShape:(NSString *)shape {
@@ -33,7 +33,7 @@
 @synthesize color = _color;
 
 + (NSArray *)validColor {
-    return @[@"red", @"puple", @"green"]; // maybe added blue later?
+    return @[@"red", @"purple", @"green"]; // maybe added blue later?
 }
 
 - (void)setColor:(NSString *)color {

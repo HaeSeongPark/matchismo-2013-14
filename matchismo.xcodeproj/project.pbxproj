@@ -12,7 +12,6 @@
 		971ADB70221117BF009BE853 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 971ADB6E221117BF009BE853 /* Main.storyboard */; };
 		971ADB75221117C0009BE853 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 971ADB73221117C0009BE853 /* LaunchScreen.storyboard */; };
 		971ADB78221117C0009BE853 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 971ADB77221117C0009BE853 /* main.m */; };
-		971ADB8222111918009BE853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 971ADB8122111918009BE853 /* Assets.xcassets */; };
 		971ADB8922112067009BE853 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 971ADB8822112067009BE853 /* Card.m */; };
 		971ADB8D221121A3009BE853 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 971ADB8C221121A3009BE853 /* PlayingCard.m */; };
 		971ADB9022112395009BE853 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 971ADB8F22112395009BE853 /* Deck.m */; };
@@ -22,6 +21,7 @@
 		97B065CF221BC469009E1CA6 /* SetCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B065CE221BC469009E1CA6 /* SetCard.m */; };
 		97B065D2221BC4C1009E1CA6 /* SetCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B065D1221BC4C1009E1CA6 /* SetCardDeck.m */; };
 		97C59BC12218EEF400BE205A /* PlayingCardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C59BC02218EEF400BE205A /* PlayingCardGameViewController.m */; };
+		97D508F8221E881800BD436A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97D508F7221E881800BD436A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,6 @@
 		971ADB74221117C0009BE853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		971ADB76221117C0009BE853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		971ADB77221117C0009BE853 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		971ADB8122111918009BE853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		971ADB8722112067009BE853 /* Card.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		971ADB8822112067009BE853 /* Card.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		971ADB8B221121A3009BE853 /* PlayingCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayingCard.h; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		97B065D1221BC4C1009E1CA6 /* SetCardDeck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetCardDeck.m; sourceTree = "<group>"; };
 		97C59BBF2218EEF400BE205A /* PlayingCardGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayingCardGameViewController.h; sourceTree = "<group>"; };
 		97C59BC02218EEF400BE205A /* PlayingCardGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayingCardGameViewController.m; sourceTree = "<group>"; };
+		97D508F7221E881800BD436A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,7 @@
 		971ADB7E22111812009BE853 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				971ADB8122111918009BE853 /* Assets.xcassets */,
+				97D508F7221E881800BD436A /* Assets.xcassets */,
 				971ADB68221117BF009BE853 /* AppDelegate.h */,
 				971ADB69221117BF009BE853 /* AppDelegate.m */,
 				971ADB73221117C0009BE853 /* LaunchScreen.storyboard */,
@@ -206,7 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				971ADB75221117C0009BE853 /* LaunchScreen.storyboard in Resources */,
-				971ADB8222111918009BE853 /* Assets.xcassets in Resources */,
+				97D508F8221E881800BD436A /* Assets.xcassets in Resources */,
 				971ADB70221117BF009BE853 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -63,7 +63,7 @@ static const int DEFAULT_CARDMATCHMODE = 2;
     for (UIButton *cardButton in self.cardButtons) {
         int cardIndex = (int)[self.cardButtons indexOfObject:cardButton];
         Card *card = [self.game cardAtIndex:cardIndex];
-        [cardButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
+        [cardButton setAttributedTitle:[self titleForCard:card] forState:UIControlStateNormal];
         [cardButton setBackgroundImage:[self backgroundImageForCard:card] forState:UIControlStateNormal];
         cardButton.enabled = !card.isMached;
     }
@@ -123,8 +123,9 @@ static const int EXTRA_NUMBER_FOR_CARDMATCHMODE = 2;
     self.game.maxMatchingCards = (int)[sender selectedSegmentIndex] + EXTRA_NUMBER_FOR_CARDMATCHMODE;
 }
 
--(NSString *)titleForCard: (Card*)card {
-    return card.isChosen ? card.contents : @"";
+-(NSAttributedString *)titleForCard: (Card*)card {
+    NSAttributedString *title = [[NSAttributedString alloc] initWithString:card.chosen ? card.contents : @""];
+    return title;
 }
 
 -(UIImage *)backgroundImageForCard:(Card *)card {
