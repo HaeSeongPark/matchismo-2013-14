@@ -5,7 +5,7 @@
 
 ##### Basically I borrowed m2mtech idea.
 
-## My Solution
+## My Description
  - make titleForCard and backgroundImageForCard methods of CardGameVC to public so that SetCardGameView use those methods.
 
 ```objc
