@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSArray *)validShading;
 +(NSUInteger)maxNumber;
 
++ (NSArray *)cardsFromText:(NSString *)text;
+
 @end
 
 NS_ASSUME_NONNULL_END

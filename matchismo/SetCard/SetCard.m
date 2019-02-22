@@ -70,7 +70,7 @@
 
 #pragma mark - contents
 - (NSString *)contents {
-    return [NSString stringWithFormat:@"%@ %@ %@ %d",self.shape, self.color, self.shading, (int)self.number];
+    return [NSString stringWithFormat:@"%@:%@:%@:%d",self.shape, self.color, self.shading, (int)self.number];
 }
 
 #pragma mark - Match
@@ -107,6 +107,35 @@
         }
     }
     return score;
+}
+
++ (NSArray *)cardsFromText:(NSString *)text
+{
+    NSString *pattern = [NSString stringWithFormat:@"(%@):(%@):(%@):(\\d+)",
+                         [[SetCard validShape] componentsJoinedByString:@"|"],
+                         [[SetCard validColor] componentsJoinedByString:@"|"],
+                         [[SetCard validShading] componentsJoinedByString:@"|"]];
+    NSError *error = NULL;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern
+                                                                           options:NSRegularExpressionCaseInsensitive
+                                                                             error:&error];
+    if (error) return nil;
+    NSArray *matches = [regex matchesInString:text
+                                      options:0
+                                        range:NSMakeRange(0, [text length])];
+    if (![matches count]) return nil;
+    
+    NSMutableArray *setCards = [[NSMutableArray alloc] init];
+    for (NSTextCheckingResult *match in matches) {
+        SetCard *setCard = [[SetCard alloc] init];
+        setCard.shape = [text substringWithRange:[match rangeAtIndex:1]];
+        setCard.color = [text substringWithRange:[match rangeAtIndex:2]];
+        setCard.shading = [text substringWithRange:[match rangeAtIndex:3]];
+        setCard.number = [[text substringWithRange:[match rangeAtIndex:4]] intValue];
+        [setCards addObject:setCard];
+    }
+    
+    return setCards;
 }
 
 - (instancetype)init
