@@ -22,7 +22,7 @@
 }
 
 - (NSUInteger)numberOfMatchingCards {
-    if(_numberOfMatchingCards) _numberOfMatchingCards = 2;
+    if(!_numberOfMatchingCards) _numberOfMatchingCards = 2;
     return _numberOfMatchingCards;
 }
 
