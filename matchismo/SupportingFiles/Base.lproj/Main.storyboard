@@ -909,11 +909,11 @@
             </objects>
             <point key="canvasLocation" x="-882" y="-13"/>
         </scene>
-        <!--Item-->
+        <!--MATCH-->
         <scene sceneID="W33-kh-NhS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gix-Qy-UmX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="20E-fO-maK"/>
+                    <tabBarItem key="tabBarItem" title="MATCH" image="playingcards" id="20E-fO-maK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lpz-zL-a51">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -928,11 +928,11 @@
             </objects>
             <point key="canvasLocation" x="93.599999999999994" y="-224.4377811094453"/>
         </scene>
-        <!--Item-->
+        <!--SET-->
         <scene sceneID="BBU-3m-ded">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SJf-vu-zCu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="6I9-TA-KOe"/>
+                    <tabBarItem key="tabBarItem" title="SET" image="setcards" id="6I9-TA-KOe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CXy-xj-3XF">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -950,7 +950,9 @@
     </scenes>
     <resources>
         <image name="cardBack" width="128" height="192"/>
+        <image name="playingcards" width="240" height="240"/>
         <image name="setCard" width="34.491016387939453" height="34.491016387939453"/>
+        <image name="setcards" width="240" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="OIk-h7-533"/>
