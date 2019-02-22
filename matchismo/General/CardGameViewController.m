@@ -8,6 +8,7 @@
 
 #import "CardGameViewController.h"
 #import "CardMatchingGame.h"
+#import "HistoryViewController.h"
 
 @interface CardGameViewController ()
 @property (strong, nonatomic) Deck *deck;
@@ -16,7 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *cardMatchMode;
 @property (weak, nonatomic) IBOutlet UISlider *resultHistorySlider;
-@property (strong, nonatomic) NSMutableArray* resultHistory;
 @end
 
 @implementation CardGameViewController
@@ -129,5 +129,15 @@ static const int EXTRA_NUMBER_FOR_CARDMATCHMODE = 2;
 
 -(UIImage *)backgroundImageForCard:(Card *)card {
     return [UIImage imageNamed: card.isChosen ? @"cardFront" : @"cardBack"];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue
+                 sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"Show History"]) {
+        if ([segue.destinationViewController isKindOfClass:[HistoryViewController class]]) {
+            [segue.destinationViewController setHistory:self.resultHistory];
+        }
+    }
 }
 @end

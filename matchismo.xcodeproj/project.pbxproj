@@ -22,6 +22,7 @@
 		97B065D2221BC4C1009E1CA6 /* SetCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B065D1221BC4C1009E1CA6 /* SetCardDeck.m */; };
 		97C59BC12218EEF400BE205A /* PlayingCardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C59BC02218EEF400BE205A /* PlayingCardGameViewController.m */; };
 		97D508F8221E881800BD436A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97D508F7221E881800BD436A /* Assets.xcassets */; };
+		97D508FB221FDB5A00BD436A /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D508FA221FDB5A00BD436A /* HistoryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,8 @@
 		97C59BBF2218EEF400BE205A /* PlayingCardGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayingCardGameViewController.h; sourceTree = "<group>"; };
 		97C59BC02218EEF400BE205A /* PlayingCardGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayingCardGameViewController.m; sourceTree = "<group>"; };
 		97D508F7221E881800BD436A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97D508F9221FDB5A00BD436A /* HistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		97D508FA221FDB5A00BD436A /* HistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 				971ADB8F22112395009BE853 /* Deck.m */,
 				971FE13A221576E600F4B3E1 /* CardMatchingGame.h */,
 				971FE13B221576E600F4B3E1 /* CardMatchingGame.m */,
+				97D508F9221FDB5A00BD436A /* HistoryViewController.h */,
+				97D508FA221FDB5A00BD436A /* HistoryViewController.m */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				971ADB6D221117BF009BE853 /* CardGameViewController.m in Sources */,
+				97D508FB221FDB5A00BD436A /* HistoryViewController.m in Sources */,
 				971ADB78221117C0009BE853 /* main.m in Sources */,
 				971ADB6A221117BF009BE853 /* AppDelegate.m in Sources */,
 				971ADB8D221121A3009BE853 /* PlayingCard.m in Sources */,

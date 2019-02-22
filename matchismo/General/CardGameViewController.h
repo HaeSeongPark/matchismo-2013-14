@@ -17,6 +17,7 @@
 -(UIImage *)backgroundImageForCard:(Card *)card;
 -(void)updateUI;
 @property (weak, nonatomic) IBOutlet UILabel *resultsDescription;
+@property (strong, nonatomic) NSMutableArray* resultHistory;
 
 
 @end
