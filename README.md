@@ -31,7 +31,7 @@ Stanford CS193p Fall 2013-2014 machismo project
 |Assignment3, Task7| noting to do[]()   |   []()|
 |Assignment3, Task8| [link](https://github.com/HaeSeongPark/matchismo-2013-14/blob/master/Description/Assignment3_Task8.md)   |   [link](https://github.com/HaeSeongPark/matchismo-2013-14/tree/assignment3_task8)|
 |Assignment3, Task9| [link](https://github.com/HaeSeongPark/matchismo-2013-14/blob/master/Description/Assignment3_Task9.md)  |   [link](https://github.com/HaeSeongPark/matchismo-2013-14/tree/assignment3_task9)|
-|Assignment3 Extra, Task1| []()   |   []()|
+|Assignment3 Extra, Task1| [link](https://github.com/HaeSeongPark/matchismo-2013-14/blob/master/Description/Assignment3_ExtraTask1.md)   |   [link](https://github.com/HaeSeongPark/matchismo-2013-14/tree/assignment3_extratask1)|
 |Assignment3 Extra, Task2| []()   |   []()|
 |Assignment1 Extra, Task3| []()   |   []()|
 |Assignment1 Extra, Task4| []()   |   []()|
